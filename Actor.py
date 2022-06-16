@@ -106,13 +106,14 @@ class Actor():
         height = 10
         return x, y, width, height
 
-    def moveattack(self,otherActor):
+    def moveattack(self,otherActor,cnt):
+        d=0.7*cnt
         if otherActor.x>self.x:
-            dx=5
-        else :dx=-5
+            dx=(2+d)
+        else :dx=-(2+d)
         if otherActor.y<self.y:
-            dy=-5
-        else :dy=5
+            dy=-(0.5+d)
+        else :dy=(0.5+d)
         self.x = self.x + dx  
         self.y = self.y + dy  
 

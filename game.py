@@ -428,7 +428,7 @@ while not done:
     printEnergy(hero)  # 히어로 체력 수치화
 
     if hero.isCollide(enermy):
-        print("적과 충돌함")
+        print("적과 충돌함") 
         hero.decreaseVitality(3)
 
     herocantout()  # 히어로가 화면 밖으로 나가지 못하게 하는 함수
@@ -438,7 +438,7 @@ while not done:
         enermy.drawActor(screen)
         enermy.drawEnergyBar(screen)
         printEnergy(enermy)  # 적 체력 수치화
-        enermy.moveattack(hero)
+        enermy.moveattack(hero, cnt)
 
         if hero.isDead == True:
             pygame.mixer.music.stop()
